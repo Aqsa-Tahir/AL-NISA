@@ -18,15 +18,14 @@ const Header = () => {
             <li><a href="/" className="hover:underline font-bold">Home</a></li>
             <li><a href="/about" className="hover:underline font-bold">About</a></li>
             <li><a href="/contact" className="hover:underline font-bold">Contact</a></li>
-            <li className="relative">
-              <a href="#" onClick={toggleDropdown} className="hover:underline font-bold">Products</a>
+            <li className="relative" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+              <a href="/services" className="hover:underline font-bold">Products</a>
               {isDropdownOpen && (
                 <ul className="absolute z-50 bg-pink-500 border rounded-md py-4 mt-2 space-y-2">
                   <li><a href="/Hot Deals" className="block px-4 py-2 text-white hover:bg-pink-400">Hot Deals</a></li>
                   <li><a href="#" className="block px-4 py-2 text-white hover:bg-pink-400">New Arrivals</a></li>
                   <li><a href="#" className="block px-4 py-2 text-white hover:bg-pink-400">Our Brands</a></li>
                   <li><a href="#" className="block px-4 py-2 text-white hover:bg-pink-400">Accessories</a></li>
-
                 </ul>
               )}
             </li>
